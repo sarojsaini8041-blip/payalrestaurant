@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payal Sweets & Restaurant | Premium Taste Hub</title>
+    <style>
+        :root {
+            --lux-bg: #0d0e12;
+            --lux-card: #171923;
+            --gold-glow: #e2b96d;
+            --gold-dark: #b88e44;
+            --sweet-pink: #ffefe2;
+            --text-light: #ffffff;
+            --text-gray: #a0aec0;
+            --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--lux-bg);
+            color: var(--text-gray);
+            font-family: var(--font-main);
+            line-height: 1.6;
+        }
+
+        /* Frictionless Global Payment Ribbon */
+        .payment-ribbon {
+            background: linear-gradient(90deg, #1a202c, #2d3748);
+            color: var(--gold-glow);
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            border-bottom: 1px solid rgba(226, 185, 109, 0.2);
+        }
+
+        /* Attractive Hero Presentation */
+        header {
+            min-height: 75vh;
+            background: linear-gradient(rgba(13, 14, 18, 0.7), rgba(13, 14, 18, 0.95)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .main-logo-box {
+            border: 2px solid var(--gold-glow);
+            padding: 15px 40px;
+            margin-bottom: 25px;
+            background: rgba(23, 25, 35, 0.6);
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            color: var(--text-light);
+            font-size: 3.5rem;
+            letter-spacing: 4px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        h1 span {
+            color: var(--gold-glow);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            max-width: 600px;
+        }
+
+        .nav-shortcuts {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            color: var(--lux-bg);
+            background-color: var(--gold-glow);
+            padding: 12px 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .nav-btn.secondary {
+            background: transparent;
+            color: var(--gold-glow);
+            border: 1px solid var(--gold-glow);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(226, 185, 109, 0.3);
+            background-color: var(--text-light);
+            color: var(--lux-bg);
+            border-color: var(--text-light);
+        }
+
+        /* Dual-Core Split Showcase */
+        .showcase-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .showcase-card {
+            background-color: var(--lux-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: border-color 0.3s;
+        }
+
+        .showcase-card:hover {
+            border-color: var(--gold-glow);
+        }
+
+        .card-img-frame {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .card-body h2 {
+            color: var(--text-light);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--gold-glow);
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        /* Seamless List Tags */
+        .food-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tag-pill {
+            background: rgba(226, 185, 109, 0.1);
+            color: var(--gold-glow);
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+
+        /* Feedback Section */
+        .feedback-container {
+            background: linear-gradient(180deg, var(--lux-bg), #11131c);
+            padding: 80px 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            color: var(--text-light);
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title p {
+            color: var(--gold-glow);
+            font-size: 0.95rem;
+            margin-top: 5px;
+        }
+
+        .review-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .review-box {
+            background-color: var(--lux-card);
+            padding: 25px;
+            border-radius: 8px;
+            position: relative;
+            border-left: 3px solid var(--gold-glow);
+        }
+
+        .stars {
+            color: var(--gold-glow);
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .review-text {
+            color: #e2e8f0;
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .reviewer-name {
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Premium Footer Contact */
+        footer {
+            background-color: #08090d;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-call {
+            color: var(--gold-glow);
+            font-size: 1.8rem;
+            text-decoration: none;
+            font-weight: 700;
+            display: block;
+            margin: 15px 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.4rem; }
+            .showcase-section { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Seamless Open Platform Notice -->
+    <div class="payment-ribbon">
+        💳 Zero Restrictions: All UPI, QR Codes, Net Banking, and Cards Gladly Accepted
+    </div>
+
+    <!-- Immersive Header Presentation -->
+    <header>
+        <div class="main-logo-box">
+            <h1>Payal <span>Sweets & Restaurant</span></h1>
+        </div>
+        <p class="subtitle">Experience fresh morning hot breakfast bites and premium authentic confections crafted daily with unparalleled taste consistency.</p>
+        <div class="nav-shortcuts">
+            <a href="#menu" class="nav-btn">View Menu Categories</a>
+            <a href="tel:+919829614504" class="nav-btn secondary">Call & Order</a>
+        </div>
+    </header>
+
+    <!-- Two Dual Core Columns Grid -->
+    <section class="showcase-section" id="menu">
+        
+        <!-- Pillar 1: High-Flavor Fresh Morning Breakfast & Platters -->
+        <div class="showcase-card">
+            <div class="card-img-frame" style="background-image: url('https://unsplash.com');"></div>
+            <div class="card-body">
+                <h2>Fresh Gastronomy</h2>
+                <p>Authentic regional morning treats, hearth stone baked breads, rich flavorful gravies, and premium refreshing dairy side items.</p>
+                
+                <div class="food-tags">
+                    <span class="tag-pill">Samosa</span>
+                    <span class="tag-pill">Onion Kachori</span>
+                    <span class="tag-pill">Dal Kachori</span>
+                    <span class="tag-pill">Mava Kachori</span>
+                    <span class="tag-pill">Spicy Pakodas</span>
+                    <span class="tag-pill">Mirchi Bada</span>
+                    <span class="tag-pill">Traditional Chapati</span>
+                    <span class="tag-pill">Premium Butter Chapati</span>
+                    <span class="tag-pill">Palak Chapati</span>
+                    <span class="tag-pill">Aromatic Sabzi Lineup</span>
+                    <span class="tag-pill">Chilled Buttermilk</span>
+                    <span class="tag-pill">Fresh Thick Curd</span>
+                    <span class="tag-pill">Crisp Garden Salad</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pillar 2: Premium Traditional Confectionery & Provisions -->
+        <div class="showcase-card">
+            <div class="card-img-frame" style="background-image: url('https://unsplash.com');"></div>
+            <div class="card-body">
+                <h2>Sweet Emporium</h2>
+                <p>Handcrafted sweets made from pure ingredients, alongside daily premium groceries and everyday packaged provisions.</p>
+                
